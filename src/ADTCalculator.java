@@ -16,11 +16,10 @@
  * @since 2021-Febrero-26
  **/    
 
-public class ADTCalculator implements Icalculadora {
+public class ADTCalculator implements ICalculator {
     
     /////////////////////////////////////////////////
 	// --> Atributos	
-    // private StackArrayList<String> numbers;
     private IStack<String> data;
 
     /////////////////////////////////////////////////

@@ -75,6 +75,12 @@ public class View {
         return file;
     }
 
+    
+    /** 
+     * Para solicitar por el tipo de pila deseado.
+     * 
+     * @return String   La opcion final.
+     */
     public String askTypeStack(){
         System.out.println("Selecciona el tipo de pila que desee usar: ");
         System.out.println("1. ArrayList");

@@ -16,6 +16,6 @@
  * @since 2021-Febrero-26
  **/    
 
-public interface Icalculadora {
+public interface ICalculator {
     public double resolver(String input);
 }

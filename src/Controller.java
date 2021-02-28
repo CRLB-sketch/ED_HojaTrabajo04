@@ -29,7 +29,6 @@ public class Controller {
     /////////////////////////////////////////////////
     // --> Contructor
     public Controller(){
-        // adtCalc = new ADTCalculator();
         rTxt = new ReaderTxt();
         view = new View();
         out = false;
@@ -93,6 +92,9 @@ public class Controller {
         } while (!out);
     }
 
+    /**
+     * Método que nos ayudará a definir el tipo de lista solicitado
+     */
     private void selectTypeStack(){
 
         String opStack = view.askTypeStack();

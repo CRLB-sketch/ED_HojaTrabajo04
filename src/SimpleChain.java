@@ -19,23 +19,31 @@ import java.util.ListIterator;
 
 public class SimpleChain<E> extends AbstractList<E> {
 
+    // --> Atributos
     protected int count; // list size
     protected Node<E> head; // ref. to first element
 
-    public SimpleChain()
-    // post: generates an empty list
-    {
+    // --> Constructor
+    public SimpleChain() {
         head = null;
         count = 0;
     }
 
+    // --> Métodos
+    /** 
+     * @return int  Tamaño de la lista enlazada.
+     */
     @Override
-    public int size()
-    // post: returns number of elements in list
-    {
+    public int size() {
         return count;
     }
 
+    
+    /** 
+     * Se agregará en la primera posición.
+     * 
+     * @param value El valor que se agregará.
+     */
     @Override
     public void addFirst(E value)
     // post: value is added to beginning of list
@@ -46,6 +54,10 @@ public class SimpleChain<E> extends AbstractList<E> {
         count++;
     }
 
+    
+    /** 
+     * @return E    Retornará el valor eliminado.
+     */
     @Override
     public E removeFirst()
     // pre: list is not empty
@@ -57,6 +69,10 @@ public class SimpleChain<E> extends AbstractList<E> {
         return temp.value();
     }
 
+    
+    /** 
+     * @return E    Obtener el primer valor.
+     */
     @Override
     public E getFirst()
     // pre: list is not empty
@@ -65,6 +81,10 @@ public class SimpleChain<E> extends AbstractList<E> {
         return head.value();
     }
 
+    
+    /** 
+     * @param value Solicitar el valor 
+     */
     @Override
     public void addLast(E value)
     // post: adds value to end of list
@@ -86,6 +106,11 @@ public class SimpleChain<E> extends AbstractList<E> {
 
     }
 
+    
+    /** 
+     * @param value     Solicita el valor deseado.
+     * @return boolean  
+     */
     @Override
     public boolean contains(E value)
     // pre: value is not null
@@ -105,78 +130,138 @@ public class SimpleChain<E> extends AbstractList<E> {
 
     }
 
+    
+    /** 
+     * @return E
+     */
     @Override
     public E getLast() {
         // TODO Auto-generated method stub
         return null;
     }
 
+    
+    /** 
+     * @return E
+     */
     @Override
     public E removeLast() {
         // TODO Auto-generated method stub
         return null;
     }
 
+    
+    /** 
+     * @param value
+     * @return E
+     */
     @Override
     public E remove(E value) {
         // TODO Auto-generated method stub
         return null;
     }
 
+    
+    /** 
+     * @param value
+     */
     @Override
     public void add(E value) {
         // TODO Auto-generated method stub
 
     }
 
+    
+    /** 
+     * @return E
+     */
     @Override
     public E remove() {
         // TODO Auto-generated method stub
         return null;
     }
 
+    
+    /** 
+     * @return E
+     */
     @Override
     public E get() {
         // TODO Auto-generated method stub
         return null;
     }
 
+    
+    /** 
+     * @param value
+     * @return int
+     */
     @Override
     public int indexOf(E value) {
         // TODO Auto-generated method stub
         return 0;
     }
 
+    
+    /** 
+     * @param value
+     * @return int
+     */
     @Override
     public int lastIndexOf(E value) {
         // TODO Auto-generated method stub
         return 0;
     }
 
+    
+    /** 
+     * @param i
+     * @return E
+     */
     @Override
     public E get(int i) {
         // TODO Auto-generated method stub
         return null;
     }
 
+    
+    /** 
+     * @param i
+     * @param o
+     * @return E
+     */
     @Override
     public E set(int i, E o) {
         // TODO Auto-generated method stub
         return null;
     }
 
+    
+    /** 
+     * @param i
+     * @param o
+     */
     @Override
     public void add(int i, E o) {
         // TODO Auto-generated method stub
 
     }
 
+    
+    /** 
+     * @param i
+     * @return E
+     */
     @Override
     public E remove(int i) {
         // TODO Auto-generated method stub
         return null;
     }
 
+    
+    /** 
+     * @return ListIterator<E>
+     */
     @Override
     public ListIterator<E> iterator() {
         // TODO Auto-generated method stub

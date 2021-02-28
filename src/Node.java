@@ -1,3 +1,20 @@
+/**
+ * <h1> Hoja de Trabajo 04</h1>
+ * <h2> Node </h2>
+ * 
+ * ADT Calculadora Postfix
+ * 
+ * <p>
+ * Algoritmos Estructuras de datos - Universidad del Valle de Guatemala
+ * </p>
+ * 
+ * Creado por:
+ * 
+ * @author [Cristian Laynez, Elean Rivas]
+ * @version 1.0
+ * @since 2021-Febrero-26
+ **/
+
 public class Node<E>
 {
    protected E data; // value stored in this element

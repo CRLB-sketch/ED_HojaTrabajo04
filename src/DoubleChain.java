@@ -1,5 +1,3 @@
-import java.util.ListIterator;
-
 /**
  * <h1>Hoja de Trabajo 04</h1>
  * <h2>Double Chain (Clase tipo "Interface")</h2>
@@ -17,12 +15,16 @@ import java.util.ListIterator;
  * @since 2021-Febrero-26
  **/
 
+import java.util.ListIterator;
+
 public class DoubleChain<E> extends AbstractList<E> {
     
+    // --> Atributos
     protected int count;
     protected NodeDouble<E> head;
     protected NodeDouble<E> tail;
 
+    // --> Constructor
     public DoubleChain()
     // post: constructs an empty list
     {
@@ -31,6 +33,7 @@ public class DoubleChain<E> extends AbstractList<E> {
         count = 0;
     }
 
+    // --> Métodos
     @Override
     public void addFirst(E value)
     // pre: value is not null
