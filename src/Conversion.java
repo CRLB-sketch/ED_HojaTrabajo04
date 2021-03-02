@@ -3,14 +3,31 @@
  */
 
 
-public class Conversion {
+public class Conversion{
     ReaderTxt rTxt = new ReaderTxt();
-
+    SimpleChain sc = new SimpleChain();
 
     private String file1;
     private String file2;
 
+    public String intToPost(char charArray[]){
 
+        for (int i=0; i>charArray.length;i++){
+
+        }
+
+        String str = String.valueOf(charArray);
+        return str;
+    }
+
+    private void cadena(){
+        char[] start={};
+        char[] stack={};
+        char[] exit={};
+        sc.addFirst(start);
+        sc.addLast(stack);
+        sc.addLast(exit);
+    }
 
     public String getFile1() {
         return file1;
@@ -20,16 +37,11 @@ public class Conversion {
         this.file1 = file1;
     }
 
-    public String getFile2() {
-        return file2;
-    }
+    public String getFile2() { return file2; }
 
     public void setFile2(String file2) {
         this.file2 = file2;
     }
-
-
-
 
     private void makeChar(String file1){
         char[] charArray=file1.toCharArray();
