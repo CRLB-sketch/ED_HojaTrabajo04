@@ -24,6 +24,7 @@ public class Controller {
     private ADTCalculator adtCalc;
     private ReaderTxt rTxt;
     private View view;
+    private Conversion conv;
     private boolean out;
 
     /////////////////////////////////////////////////
@@ -31,6 +32,7 @@ public class Controller {
     public Controller(){
         rTxt = new ReaderTxt();
         view = new View();
+        conv = new Conversion();
         out = false;
     }
 
@@ -56,8 +58,9 @@ public class Controller {
                         view.dialogueText(file1);
                     }
                     else{ // Por sí se leyo correctamente el archivo
+                        String returnoutfix= conv.intToPost(file1);
                         selectTypeStack();
-                        makeOperation(file1);
+                        makeOperation(returnoutfix);
                     }
                 
                     break;
@@ -71,8 +74,9 @@ public class Controller {
                         view.dialogueText(file2);
                     }
                     else{ // Por sí se leyo correctamente el archivo
+                        String returnoutfix= conv.intToPost(file2);
                         selectTypeStack();
-                        makeOperation(file2);
+                        makeOperation(returnoutfix);
                     }
 
                     break;
