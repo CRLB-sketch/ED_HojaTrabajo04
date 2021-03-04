@@ -15,6 +15,7 @@
  * @author [Cristian Laynez, Elean Rivas]
  * @version 1.0
  * @since 2021-Febrero-26
+ * 
  **/
 
 public abstract class AbstractList<E> implements IList<E> {
@@ -24,12 +25,21 @@ public abstract class AbstractList<E> implements IList<E> {
    {
    }
 
+   
+   /** 
+    * @return boolean
+    */
    public boolean isEmpty()
    // post: returns true iff list has no elements
    {
       return size() == 0;
    }
   
+  
+  /** 
+   * @param value
+   * @return boolean
+   */
   public boolean contains(E value)
   // pre: value is not null
   // post: returns true iff list contains an object equal to value
@@ -38,3 +48,5 @@ public abstract class AbstractList<E> implements IList<E> {
   }
 
 }
+
+// Referencia de archivos cargados de Canvas Algoritmos y Estrucutaras de Datos

@@ -24,16 +24,20 @@ public class ADTCalculator implements ICalculator {
 
     /////////////////////////////////////////////////
     // --> Constructor
-    public ADTCalculator(){
-        data = new StackArrayList<String>();
-    }
-
-    public ADTCalculator(IStack<String> typeStack){
-        data = typeStack;
+    public ADTCalculator(){ 
+        // No inicializará nada....       
     }
 
     /////////////////////////////////////////////////
     // --> Métodos
+    /**
+     * Método para inizialiar la pila solicitada
+     * 
+     * @param typeStack La pila recibida por la fabrica.
+     */
+    public void defineStack(IStack<String> typeStack){
+        data = typeStack;
+    }
     
     /** 
 	 * Este método hará push a este ArrayList.

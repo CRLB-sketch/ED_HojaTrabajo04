@@ -41,6 +41,11 @@ class ConversionTest {
 
     }
 
+    
+    /** 
+     * @param op
+     * @return boolean
+     */
     private boolean isOp(char op){
         switch(op){
             case '+':
@@ -60,6 +65,11 @@ class ConversionTest {
 
 
 
+    
+    /** 
+     * @param op
+     * @return boolean
+     */
     private boolean isOrd(char op){
         return switch (op){
             case '(' -> true;

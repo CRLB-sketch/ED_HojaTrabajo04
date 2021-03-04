@@ -30,6 +30,7 @@ public class Controller {
     /////////////////////////////////////////////////
     // --> Contructor
     public Controller(){
+        adtCalc = new ADTCalculator();
         rTxt = new ReaderTxt();
         view = new View();
         conv = new Conversion();
@@ -52,37 +53,55 @@ public class Controller {
 
                 // Leer archivo predeterminado
                 case "1":
-                    String file1 = rTxt.readFile("src\\defaultTxt.txt");
+                    String file1 = rTxt.readFile("defaultTxt.txt");
                     
                     if(file1.equals("error")){
                         view.dialogueText(file1);
                     }
                     else{ // Por sí se leyo correctamente el archivo
-                        String returnoutfix= conv.intToPost(file1);
+                        String returnoutfix = conv.intToPost(file1);    
                         selectTypeStack();
+                        view.formatInfix(file1);                        
+                        makeOperation(returnoutfix);
+                    }
+                
+                    break;
+
+                // Leer archivo predeterminado
+                case "2":
+                    String file2 = rTxt.readFile("data2.txt");
+                    
+                    if(file2.equals("error")){
+                        view.dialogueText(file2);
+                    }
+                    else{ // Por sí se leyo correctamente el archivo
+                        String returnoutfix = conv.intToPost(file2);  
+                        selectTypeStack();
+                        view.formatInfix(file2);                                             
                         makeOperation(returnoutfix);
                     }
                 
                     break;
 
                 // Leer otro archivo ajeno
-                case "2":
+                case "3":
                     String file_choiced = view.askFile();
-                    String file2 = rTxt.readFile(file_choiced);
+                    String file3 = rTxt.readFile(file_choiced);
 
-                    if(file2.equals("error")){
-                        view.dialogueText(file2);
+                    if(file3.equals("error")){
+                        view.dialogueText(file3);
                     }
                     else{ // Por sí se leyo correctamente el archivo
-                        String returnoutfix= conv.intToPost(file2);
+                        String returnoutfix= conv.intToPost(file3);                        
                         selectTypeStack();
+                        view.formatInfix(file3);    
                         makeOperation(returnoutfix);
                     }
 
                     break;
 
                 // Salir/Terminar el programa
-                case "3":
+                case "4":
                     out = true;
                     view.farewell();                                        
                     break;
@@ -105,22 +124,22 @@ public class Controller {
 
         switch (opStack) {
             case "1":
-                adtCalc = new ADTCalculator( StackFactory.create("ArrayList") );
+                adtCalc.defineStack( StackFactory.create("ArrayList"));
                 view.dialogueText("--> Se utilizará un ArrayList" );
                 break;
 
             case "2":
-                adtCalc = new ADTCalculator( StackFactory.create("List") );
+                adtCalc.defineStack( StackFactory.create("List"));
                 view.dialogueText("--> Se utilizará una List" );
                 break;
 
             case "3":
-                adtCalc = new ADTCalculator( StackFactory.create("Vector") );
+                adtCalc.defineStack( StackFactory.create("Vector"));
                 view.dialogueText("--> Se utilizará un Vector" );
                 break;
         
             default:
-                adtCalc = new ADTCalculator( StackFactory.create("ArrayList") );
+                adtCalc.defineStack( StackFactory.create("ArrayList"));
                 view.dialogueText("--> Entonces usaremos un ArrayList" );
                 break;
         }
@@ -135,6 +154,7 @@ public class Controller {
     private void makeOperation(String operation){
         
         double final_answer = 0;
+        
         String[] the_operation = operation.split(" ");
 
         try {

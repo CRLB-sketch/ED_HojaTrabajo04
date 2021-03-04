@@ -15,8 +15,6 @@
  * @since 2021-Febrero-26
  **/
 
-import java.util.ListIterator;
-
 public class SimpleChain<E> extends AbstractList<E> {
 
     // --> Atributos
@@ -124,148 +122,14 @@ public class SimpleChain<E> extends AbstractList<E> {
         return finger != null;
     }
 
-    @Override
-    public void clear() {
-        // TODO Auto-generated method stub
-
-    }
-
-    
-    /** 
-     * @return E
+    /**
+     * No hará nada en este caso
      */
-    @Override
-    public E getLast() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    
-    /** 
-     * @return E
-     */
-    @Override
-    public E removeLast() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    
-    /** 
-     * @param value
-     * @return E
-     */
-    @Override
-    public E remove(E value) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    
-    /** 
-     * @param value
-     */
-    @Override
-    public void add(E value) {
-        // TODO Auto-generated method stub
-
-    }
-
-    
-    /** 
-     * @return E
-     */
-    @Override
-    public E remove() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    
-    /** 
-     * @return E
-     */
-    @Override
-    public E get() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    
-    /** 
-     * @param value
-     * @return int
-     */
-    @Override
+    @Override    
     public int indexOf(E value) {
-        // TODO Auto-generated method stub
         return 0;
     }
-
-    
-    /** 
-     * @param value
-     * @return int
-     */
-    @Override
-    public int lastIndexOf(E value) {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    
-    /** 
-     * @param i
-     * @return E
-     */
-    @Override
-    public E get(int i) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    
-    /** 
-     * @param i
-     * @param o
-     * @return E
-     */
-    @Override
-    public E set(int i, E o) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    
-    /** 
-     * @param i
-     * @param o
-     */
-    @Override
-    public void add(int i, E o) {
-        // TODO Auto-generated method stub
-
-    }
-
-    
-    /** 
-     * @param i
-     * @return E
-     */
-    @Override
-    public E remove(int i) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    
-    /** 
-     * @return ListIterator<E>
-     */
-    @Override
-    public ListIterator<E> iterator() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-    
+            
 }
+
+// Referencia de archivos cargados de Canvas Algoritmos y Estrucutaras de Datos

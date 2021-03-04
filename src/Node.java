@@ -36,24 +36,40 @@ public class Node<E>
       this(v,null);
    }
 
+   
+   /** 
+    * @return Node<E>
+    */
    public Node<E> next()
    // post: returns reference to next value in list
    {
       return nextElement;
    }
 
+   
+   /** 
+    * @param next
+    */
    public void setNext(Node<E> next)
    // post: sets reference to new next value
    {
       nextElement = next;
    }
 
+   
+   /** 
+    * @return E
+    */
    public E value()
    // post: returns value associated with this element
    {
       return data;
    }
 
+   
+   /** 
+    * @param value
+    */
    public void setValue(E value)
    // post: sets value associated with this element
    {

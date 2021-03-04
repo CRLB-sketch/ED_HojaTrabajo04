@@ -40,9 +40,10 @@ public class View {
     public String menu(){
         System.out.println("*** ADT Calculadora ***");
         System.out.println("Menu: ");
-        System.out.println("1. Leer archivo predeterminado");
-        System.out.println("2. Leer otro archivo");
-        System.out.println("3. Salir");
+        System.out.println("1. Leer archivo predeterminado 1");
+        System.out.println("2. Leer archivo predeterminado 2");
+        System.out.println("3. Leer otro archivo");
+        System.out.println("4. Salir");
         
         String option = scan.nextLine();
         return option;
@@ -102,6 +103,15 @@ public class View {
     }
 
     /**
+     * Para mostrar el formato infix.
+     * 
+     * @param infix Para solicitar el infix
+     */
+    public void formatInfix(String infix){
+        System.out.println("Infix: " + infix);
+    }
+
+    /**
      * Por sí el documento tiene letras
      */
     public void errorLetter(){
@@ -122,7 +132,7 @@ public class View {
      * @param final_number  El resultado final.
      */
     public void result(String operation, double final_number){
-        System.out.println("\n" + operation);
+        System.out.println("\nPostfix: " + operation);
         System.out.println("Resultado: " + final_number + "\n");
     }
 
