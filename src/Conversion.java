@@ -73,21 +73,29 @@ public class Conversion{
     }
 
 
+    
     /***
      *
      * @param op el dato
      * @return
      */
     private boolean isOp(String op){
-        return switch (op) {
-            case "+" -> true;
-            case "-" -> true;
-            case "/" -> true;
-            case "*" -> true;
-            case "^" -> true;
-            case "(" -> true;
-            default -> false;
-        };
+        switch (op) {
+            case "+":
+                return true;
+            case "-":
+                return true;
+            case "/":
+                return true;
+            case "*":
+                return true;
+            case "^":
+                return true;
+            case "(":
+                return true;
+            default:
+                return false;
+        }
     }
 
     /***
@@ -95,11 +103,14 @@ public class Conversion{
      * @param op
      * @return
      */
+
     private boolean isOrd(String op){
-        return switch (op){
-            case ")" -> true;
-            default -> false;
-        };
+        switch (op) {
+            case ")":
+                return true;
+            default:
+                return false;
+        }
     }
 
 }
