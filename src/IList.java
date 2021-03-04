@@ -13,8 +13,6 @@
  * @since 2021-Febrero-26
  **/    
 
-import java.util.ListIterator;
- 
 public interface IList<E> {
 
     public int size();

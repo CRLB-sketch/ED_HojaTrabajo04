@@ -63,7 +63,7 @@ public class ADTCalculator implements ICalculator {
      *              llevará a cabo.
      * @return int  Retornará el resultado.
      */
-    public double resolver(String op){
+    public double resolv(String op){
         int result = 0; 
         
         for (int i = 0; i < data.size(); i++) {

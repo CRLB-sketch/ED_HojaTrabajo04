@@ -17,5 +17,5 @@
  **/    
 
 public interface ICalculator {
-    public double resolver(String input);
+    public double resolv(String input);
 }

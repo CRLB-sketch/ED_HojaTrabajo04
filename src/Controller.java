@@ -164,7 +164,7 @@ public class Controller {
                     adtCalc.pushNum(op);
                 }
                 else{ // Si es operador                
-                    final_answer = adtCalc.resolver(op);
+                    final_answer = adtCalc.resolv(op);
                 }
             }
             

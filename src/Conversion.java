@@ -20,12 +20,19 @@
 
 public class Conversion{
 
+    /////////////////////////////////////////////////
+    // --> Atributos
     private SimpleChain<String> simpleC;
 
+    /////////////////////////////////////////////////
+    // --> Constructor
     public Conversion() {
         simpleC = new SimpleChain<>();
     }
 
+    /////////////////////////////////////////////////
+    // --> Métodos
+    
     /***
      *
      * @param file1 el dato en formato intfix a convertir
@@ -71,8 +78,6 @@ public class Conversion{
 
         return output;
     }
-
-
     
     /***
      *
